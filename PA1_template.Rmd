@@ -52,7 +52,7 @@ p <- g + geom_histogram(stat="identity",size=1,alpha=0.5, fill = "blue") +
 
 And this is the total number of steps per day
 
-``` {r stepsPerDay, echo = FALSE, fig.height = 5, fig.width=11}
+``` {r stepsPerDay, echo = FALSE, fig.height = 5, fig.width=11, fig.path = 'figures/'}
 print(p)
 
 ```
@@ -75,7 +75,7 @@ Median = `r median.total`
 
 To see the average daily activity pattern we are going to make a time series of the 5-minute interval and the average number of steps taken, averaged accross all days.
 
-``` {r averageDaily}
+``` {r averageDaily, fig.path = 'figures/'}
 average.interval <- aggregate(steps ~ interval, dataSet, mean)
 
 plot(average.interval$steps~average.interval$interval, type="l", 
@@ -136,7 +136,7 @@ p <- g + geom_histogram(stat="identity",size=1,alpha=0.5, fill = "blue") +
         axis.text.x  = element_text(angle=90, vjust=0.5, size=7)) 
 ```
 
-``` {r histogramTotalSteps, echo = FALSE, fig.height = 5, fig.width = 11}
+``` {r histogramTotalSteps, echo = FALSE, fig.height = 5, fig.width = 11,fig.path = 'figures/'}
 print(p)
 ```
 
@@ -174,7 +174,7 @@ dataSet.final <- rbind(weekdays,weekends)
 
 The second step is to make a panel plot containing a time series plot of the 5-minute interval and the average number of steps taken, averaged across all weekday days or weekend days.
 
-``` {r plot-5-minute}
+``` {r plot-5-minute, fig.path = 'figures/'}
 par(mfrow=c(2,1), cex.lab = 0.7, cex.axis = 0.7)
 average.interval.weekends <- aggregate(steps ~ interval, weekends, mean)
 plot(average.interval.weekends$steps~average.interval.weekends$interval, type="l", 

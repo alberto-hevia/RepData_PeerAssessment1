@@ -51,7 +51,7 @@ p <- g + geom_histogram(stat="identity",size=1,alpha=0.5, fill = "blue") +
 
 And this is the total number of steps per day
 
-![plot of chunk stepsPerDay](figure/stepsPerDay.png) 
+![plot of chunk stepsPerDay](figures/stepsPerDay.png) 
 
 The mean total of steps taken per day is obtained with the following code:
 
@@ -84,7 +84,7 @@ plot(average.interval$steps~average.interval$interval, type="l",
 axis(side=1, at = average.interval$interval, labels = average.interval$interval)
 ```
 
-![plot of chunk averageDaily](figure/averageDaily.png) 
+![plot of chunk averageDaily](figures/averageDaily.png) 
 
 You can see that the maximum number of steps for the 5-minute interval on average across all the days is:
 
@@ -139,7 +139,7 @@ p <- g + geom_histogram(stat="identity",size=1,alpha=0.5, fill = "blue") +
         axis.text.x  = element_text(angle=90, vjust=0.5, size=7)) 
 ```
 
-![plot of chunk histogramTotalSteps](figure/histogramTotalSteps.png) 
+![plot of chunk histogramTotalSteps](figures/histogramTotalSteps.png) 
 
 The mean total of steps taken per day is obtained with the following code:
 
@@ -195,5 +195,5 @@ plot(average.interval.weekdays$steps~average.interval.weekdays$interval, type="l
 axis(side=1, at = average.interval.weekdays$interval, labels = average.interval.weekdays$interval)
 ```
 
-![plot of chunk plot-5-minute](figure/plot-5-minute.png) 
+![plot of chunk plot-5-minute](figures/plot-5-minute.png) 
 
