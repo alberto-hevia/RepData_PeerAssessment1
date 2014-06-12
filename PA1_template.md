@@ -1,5 +1,4 @@
-Activity Patterns Analysis
-========================================================
+# Reproducible Research: Peer Assessment 1
 
 ## Introduction
 
@@ -33,7 +32,7 @@ First of all we are going to obtain the information without NAs
 dataSet <- dataSet.complete[!is.na(dataSet.complete$steps),]
 ```
 
-## Total number of steps taken per day
+## What is mean total number of steps taken per day?
 
 Let's obtain the total number of steps per day and make a histogram to show it:
 
@@ -70,7 +69,7 @@ median.total <- format(round(median(total.day$steps),2),digits=10)
 Median = 10765
 
 
-## Average daily activity pattern
+## What is the average daily activity pattern?
 
 To see the average daily activity pattern we are going to make a time series of the 5-minute interval and the average number of steps taken, averaged accross all days.
 
@@ -158,7 +157,7 @@ median.total <- format(round(median(total.day$steps),2),digits=10)
 ```
 Median = 10766.19
 
-## Comparison in activity patterns between weekdays and weekends
+## Are there differences in activity patterns between weekdays and weekends?
 
 The first step is creating a new factor variable in the dataset with two levels: "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
@@ -197,3 +196,4 @@ axis(side=1, at = average.interval.weekdays$interval, labels = average.interval.
 ```
 
 ![plot of chunk plot-5-minute](figure/plot-5-minute.png) 
+

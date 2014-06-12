@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>Activity Patterns Analysis</title>
+<title>Reproducible Research: Peer Assessment 1</title>
 
 <!-- Styles for R syntax highlighter -->
 <style type="text/css">
@@ -190,7 +190,7 @@ hr {
 </head>
 
 <body>
-<h1>Activity Patterns Analysis</h1>
+<h1>Reproducible Research: Peer Assessment 1</h1>
 
 <h2>Introduction</h2>
 
@@ -221,7 +221,7 @@ dataSet.complete &lt;- read.csv(file = fileName, stringsAsFactors = FALSE, sep =
 <pre><code class="r">dataSet &lt;- dataSet.complete[!is.na(dataSet.complete$steps),]
 </code></pre>
 
-<h2>Total number of steps taken per day</h2>
+<h2>What is mean total number of steps taken per day?</h2>
 
 <p>Let&#39;s obtain the total number of steps per day and make a histogram to show it:</p>
 
@@ -254,7 +254,7 @@ p &lt;- g + geom_histogram(stat=&quot;identity&quot;,size=1,alpha=0.5, fill = &q
 
 <p>Median = 10765</p>
 
-<h2>Average daily activity pattern</h2>
+<h2>What is the average daily activity pattern?</h2>
 
 <p>To see the average daily activity pattern we are going to make a time series of the 5-minute interval and the average number of steps taken, averaged accross all days.</p>
 
@@ -330,7 +330,7 @@ p &lt;- g + geom_histogram(stat=&quot;identity&quot;,size=1,alpha=0.5, fill = &q
 
 <p>Median = 10766.19</p>
 
-<h2>Comparison in activity patterns between weekdays and weekends</h2>
+<h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 
 <p>The first step is creating a new factor variable in the dataset with two levels: &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.</p>
 
